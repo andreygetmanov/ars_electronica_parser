@@ -4,9 +4,9 @@ from scripts.parser import Parser
 To parse the full archive (all years, categories and awards) just run parse_data() with default parameters.
 
 Years can be given as list:
-    years = [1987, 1995, 2000, 2010]
+    years=[1987, 1995, 2000, 2010]
 or as range:
-    years = range(1987, 1995)
+    years=range(1987, 1995)
 
 Award and category can be given as str:
     award='Golden Nica'

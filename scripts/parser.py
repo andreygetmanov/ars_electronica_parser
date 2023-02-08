@@ -149,6 +149,8 @@ class Parser:
                     The category of the artwork.
                 - `description` : str
                     The description of the artwork.
+                - 'img_list' : list
+                    The list containing the URLs to the artwork images.
                 - 'url' : str
                     The URL to the artwork.
         """
@@ -166,6 +168,12 @@ class Parser:
         except IndexError:
             print(f'Artwork {name} ({year}) has no description')
             description = ''
+        root_link = 'https://archive.aec.at'
+        try:
+            img_list = [root_link + img['src'] for img in content.find_all('img', class_='media')]
+        except IndexError:
+            print(f'Artwork {name} ({year}) has no images')
+            img_list = []
 
         artwork_data = {
             'name': name,
@@ -174,6 +182,7 @@ class Parser:
             'year': year,
             'category': category,
             'description': description,
+            'img_list': img_list,
             'url': url
         }
         return artwork_data

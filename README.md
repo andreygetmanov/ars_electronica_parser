@@ -2,7 +2,7 @@
 
 Parses data from [Ars Electronica Archive](https://archive.aec.at/prix/) to a json file.
 
-The data contains info about artwork's name, authors, award, year of nomination, category, description, and also a link to it. 
+The data contains info about artwork's name, authors, award, year of nomination, category, description, a list of links to artwork's photos, and also a link to the artwork itself. 
 
 Just run `main.py` to use the parser. 
 You can filter the required artworks by years, awards and nominations.
