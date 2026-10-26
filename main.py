@@ -2,11 +2,13 @@ from scripts.parser import Parser
 
 """
 To parse the full archive (all years, categories and awards) just run parse_data() with default parameters.
+If the json already exists, only the artworks missing in it are parsed (pass update=False to parse everything again).
 
 Years can be given as list:
     years=[1987, 1995, 2000, 2010]
 or as range:
     years=range(1987, 1995)
+By default all the years available in the archive are parsed.
 
 Award and category can be given as str:
     award='Golden Nica'
@@ -18,13 +20,14 @@ Saving path can be given as str:
 
 Awards:
     All
-    Submissions with Award
     Golden Nica
+    Grand Prize
     Award of Distinction
     Honorary Mention
     Grant
     Special Prize
     Nomination
+    Young Creatives Prize
 
 Categories:
     All
@@ -42,6 +45,8 @@ Categories:
     Klasse! Lernen
     Artificial Intelligence & Life Art
     Digital Humanity
+    AI in Art Award
+    AI for Social Impact Initiative
 
 Enjoy!
 """
